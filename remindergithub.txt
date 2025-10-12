@@ -1,0 +1,53 @@
+reminder, karena kadang lupa juga🤣
+
+# ngoding di cabang (branch) tutorial
+
+# 1. cek dulu posisi kamu sekarang
+git status
+# kalau kamu masih di main, biasanya muncul:
+# On branch main
+
+
+# 2. buat cabang baru
+# misal kamu mau bikin branch namanya tes-fitur-baru
+git checkout -b tes-fitur-baru
+# artinya:
+# checkout = pindah ke branch lain
+# -b = bikin branch baru sekalian pindah ke situ
+
+
+# 3. pastiin kamu udah pindah
+git branch
+# branch yang aktif bakal dikasih tanda *
+# contoh:
+# * tes-fitur-baru
+#   main
+
+
+# 4. lanjut ngoding & commit kayak biasa
+git add .
+git commit -m "uji fitur baru"
+
+
+# 5. push branch baru ke github
+git push origin tes-fitur-baru
+# abis itu buka github, bakal muncul tombol "Compare & pull request"
+
+
+# 6. kalau udah siap digabung ke main
+git checkout main
+git pull origin main   # pastiin main-nya paling baru
+git merge tes-fitur-baru
+git push origin main
+
+
+# 7. hapus cabang yang udah gak dipakai
+git branch -d tes-fitur-baru
+
+
+# 8. cek semua cabang yang kamu punya
+git branch
+
+
+# (opsional) hapus cabang di remote github juga
+git push origin --delete tes-fitur-baru
