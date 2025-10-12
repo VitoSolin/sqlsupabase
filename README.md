@@ -1,0 +1,1 @@
+daftar supabase sql yang sering dipake.
